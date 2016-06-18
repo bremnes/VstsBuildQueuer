@@ -1,6 +1,4 @@
-# VstsBuildQueuer
-Latest CI-build ![latest ci-build](https://bremnes.visualstudio.com/_apis/public/build/definitions/6558d582-1da3-4ed0-83e0-6375cef1afac/11/badge)
-
+# VstsBuildQueuer  ![latest ci-build](https://bremnes.visualstudio.com/_apis/public/build/definitions/6558d582-1da3-4ed0-83e0-6375cef1afac/11/badge)
 Queue builds for Visual Studio Team Services (or TFS) in defined order
 
 ##The problem
