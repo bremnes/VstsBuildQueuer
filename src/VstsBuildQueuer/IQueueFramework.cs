@@ -4,6 +4,6 @@ namespace VstsBuildQueuer
 {
     public interface IQueueFramework
     {
-        Task<QueueFramework> TriggerBuilds(params string[] buildDefinitionNames);
+        Task<QueueFramework> QueueBuilds(params string[] buildDefinitionNames);
     }
 }

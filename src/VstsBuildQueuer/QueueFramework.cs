@@ -17,7 +17,7 @@ namespace VstsBuildQueuer
             return this;
         }
 
-        public async Task<QueueFramework> TriggerBuilds(params string[] buildDefinitionNames)
+        public async Task<QueueFramework> QueueBuilds(params string[] buildDefinitionNames)
         {
             await Task.WhenAll(buildDefinitionNames.Select(TriggerIndividualBuildAsync));
             return this;
