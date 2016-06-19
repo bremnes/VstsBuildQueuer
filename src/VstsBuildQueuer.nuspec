@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>VstsBuildQueuer</id>
+    <title>VstsBuildQueuer - serial and parallel build flow</title>
+    <version>0.1</version>
+    <authors>Lars Kristian Bremnes</authors>
+    <owners>Lars Kristian Bremnes</owners>
+    <licenseUrl>https://github.com/bremnes/VstsBuildQueuer</licenseUrl>
+    <projectUrl>https://github.com/bremnes/VstsBuildQueuer</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Queue builds for Visual Studio Team Services (or TFS) in defined order</summary>
+    <description>If you are requiring builds to be run in a defined sequence because one or more checks inn binary files to the source control system that others are dependant on.</description>
+    <dependencies>
+      <group>
+        <dependency id="Microsoft.VisualStudio.Services.Client" version="14.95.3" />
+        <dependency id="Microsoft.TeamFoundationServer.Client" version="14.95.3" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="VstsBuildQueuer\bin\*\VstsBuildQueuer.dll" target="lib\net45" />
+  </files>
+</package>
