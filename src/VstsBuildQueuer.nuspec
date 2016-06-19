@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/bremnes/VstsBuildQueuer</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Queue builds for Visual Studio Team Services (or TFS) in defined order</summary>
-    <description>In legacy systems one might have several builds that check in binary files. If other solutions (and therefore builds) are dependant on those binaries you have a build dependancy. When merging/branching you then need to do this in a defined sequence. Instead of doing this manually, this tool can help you automate this process. See project page for more details.</description>
+    <description>In legacy systems one might have several builds that checks in binary files. If other solutions (and therefore builds) are dependant on those binaries you have a build dependency. When merging/branching you then need to do this in a defined sequence. Instead of doing this manually, this tool can help you automate this process. See project site for more details or to report issues.</description>
     <dependencies>
       <group>
         <dependency id="Microsoft.VisualStudio.Services.Client" version="14.95.3" />
