@@ -26,7 +26,7 @@ foreach ($file in $AllVersionFiles)
             $content += "[assembly:AssemblyInformationalVersion(`"$assemblyFileVersion`")]"
 
 			if ($content -match "AssemblyTitle\(`"VstsBuildQueuer`"\)"){
-				$versionNumber = $version.ToString()
+				$versionNumber = "$($version.Major).$($version.Minor).$($version.Build)"
 			}
 
             Set-Content -Path $file.FullName -Value $content
