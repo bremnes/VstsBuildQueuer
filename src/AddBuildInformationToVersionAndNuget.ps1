@@ -10,9 +10,7 @@ $versionNumber = "0.0.0.0"
 # (used for CI, not for releases)
 "##vso[task.setvariable variable=RevisionInformation;]$revisionInformation"
 
-
 $AllVersionFiles = Get-ChildItem "AssemblyInfo.cs" -recurse
-
 foreach ($file in $AllVersionFiles) 
 { 
 	Write-Verbose "Checking file $($file.FullName)" -Verbose
@@ -20,10 +18,10 @@ foreach ($file in $AllVersionFiles)
     $content -match $assemblyVersionRegex | % {
         if($_ -match $versionRegex ) {
             $version = [version]$matches[1]
-            $assemblyFileVersion = $version.ToString() + "-$branchName+$commitId"
+            $assemblyInformationalVersion = $version.ToString() + "-$branchName+$commitId"
 
-			Write-Verbose "Setting AssemblyFileVersion to $assemblyFileVersion" -Verbose
-            $content += "[assembly:AssemblyInformationalVersion(`"$assemblyFileVersion`")]"
+			Write-Verbose "Setting AssemblyInformationalVersion to $assemblyFileVersion" -Verbose
+            $content += "[assembly:AssemblyInformationalVersion(`"$assemblyInformationalVersion`")]"
 
 			if ($content -match "AssemblyTitle\(`"VstsBuildQueuer`"\)"){
 				$versionNumber = "$($version.Major).$($version.Minor).$($version.Build)"
